@@ -63,21 +63,37 @@ export const Footer = () => {
               La primera red colaborativa de parqueos y alquiler de autos entre particulares, optimizada por inteligencia artificial y enfocada en movilidad eléctrica.
             </p>
 
-            <div className="flex items-center gap-2.5">
-              {[Globe, MessageCircle, Share2].map((Icon, i) => (
-                <a key={i} href="#"
-                  className="w-9 h-9 rounded-xl border border-slate-800 flex items-center justify-center text-slate-600 hover:text-[#00f5a0] hover:border-[#00f5a030] transition-all">
-                  <Icon className="w-4 h-4" />
-                </a>
-              ))}
+            {/* SOCIAL MEDIA LINKS */}
+            <div>
+              <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Síguenos en Redes Sociales</p>
+              <div className="flex flex-wrap items-center gap-2">
+                {[
+                  { name: 'Instagram', label: '@parkshare.app', href: 'https://instagram.com', color: '#e1306c', icon: '📸' },
+                  { name: 'Facebook', label: 'ParkShare Global', href: 'https://facebook.com', color: '#1877f2', icon: '👤' },
+                  { name: 'Twitter / X', label: '@ParkShareAI', href: 'https://twitter.com', color: '#38bdf8', icon: '🐦' },
+                  { name: 'LinkedIn', label: 'ParkShare Inc.', href: 'https://linkedin.com', color: '#0a66c2', icon: '💼' },
+                  { name: 'WhatsApp', label: '+507 6000-0000', href: 'https://wa.me/50760000000', color: '#25d366', icon: '💬' },
+                ].map((s, i) => (
+                  <a
+                    key={i}
+                    href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-slate-800 bg-[#080d18] text-xs text-slate-400 hover:text-white hover:border-[#00f5a050] transition-all"
+                  >
+                    <span>{s.icon}</span>
+                    <span className="font-semibold">{s.name}</span>
+                  </a>
+                ))}
+              </div>
             </div>
 
             <div className="space-y-2">
-              <div className="flex items-center gap-2 text-xs text-slate-600">
-                <Mail className="w-3.5 h-3.5 text-slate-700" /> hola@parkshare-ai.com
+              <div className="flex items-center gap-2 text-xs text-slate-500">
+                <Mail className="w-3.5 h-3.5 text-[#00f5a0]" /> soporte@parkshare-ai.com
               </div>
-              <div className="flex items-center gap-2 text-xs text-slate-600">
-                <Phone className="w-3.5 h-3.5 text-slate-700" /> +54 11 5550-7890
+              <div className="flex items-center gap-2 text-xs text-slate-500">
+                <Phone className="w-3.5 h-3.5 text-[#00f5a0]" /> +507 800-PARK (Panamá)
               </div>
             </div>
           </div>
