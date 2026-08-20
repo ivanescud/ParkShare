@@ -65,26 +65,65 @@ export const Footer = () => {
 
             {/* SOCIAL MEDIA LINKS */}
             <div>
-              <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Síguenos en Redes Sociales</p>
+              <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2.5">Síguenos en Redes Sociales</p>
               <div className="flex flex-wrap items-center gap-2">
-                {[
-                  { name: 'Instagram', label: '@parkshare.app', href: 'https://instagram.com', color: '#e1306c', icon: '📸' },
-                  { name: 'Facebook', label: 'ParkShare Global', href: 'https://facebook.com', color: '#1877f2', icon: '👤' },
-                  { name: 'Twitter / X', label: '@ParkShareAI', href: 'https://twitter.com', color: '#38bdf8', icon: '🐦' },
-                  { name: 'LinkedIn', label: 'ParkShare Inc.', href: 'https://linkedin.com', color: '#0a66c2', icon: '💼' },
-                  { name: 'WhatsApp', label: '+507 6000-0000', href: 'https://wa.me/50760000000', color: '#25d366', icon: '💬' },
-                ].map((s, i) => (
-                  <a
-                    key={i}
-                    href={s.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl border border-slate-800 bg-[#080d18] text-xs text-slate-400 hover:text-white hover:border-[#00f5a050] transition-all"
-                  >
-                    <span>{s.icon}</span>
-                    <span className="font-semibold">{s.name}</span>
-                  </a>
-                ))}
+                
+                {/* INSTAGRAM */}
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-3 py-2 rounded-xl border border-slate-800 bg-[#080d18] text-xs font-semibold text-slate-300 hover:text-[#00f5a0] hover:border-[#00f5a050] hover:bg-[#00f5a008] transition-all group"
+                >
+                  <svg className="w-4 h-4 text-pink-500 group-hover:text-[#00f5a0] transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                  </svg>
+                  <span>Instagram</span>
+                </a>
+
+                {/* FACEBOOK */}
+                <a
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-3 py-2 rounded-xl border border-slate-800 bg-[#080d18] text-xs font-semibold text-slate-300 hover:text-[#00d4ff] hover:border-[#00d4ff50] hover:bg-[#00d4ff08] transition-all group"
+                >
+                  <svg className="w-4 h-4 text-cyan-400 group-hover:text-[#00d4ff] transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                  </svg>
+                  <span>Facebook</span>
+                </a>
+
+                {/* LINKEDIN */}
+                <a
+                  href="https://linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-3 py-2 rounded-xl border border-slate-800 bg-[#080d18] text-xs font-semibold text-slate-300 hover:text-[#a855f7] hover:border-[#a855f750] hover:bg-[#a855f708] transition-all group"
+                >
+                  <svg className="w-4 h-4 text-purple-400 group-hover:text-[#a855f7] transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                    <rect width="4" height="12" x="2" y="9"/>
+                    <circle cx="4" cy="4" r="2"/>
+                  </svg>
+                  <span>LinkedIn</span>
+                </a>
+
+                {/* WHATSAPP */}
+                <a
+                  href="https://wa.me/50760000000"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-3 py-2 rounded-xl border border-slate-800 bg-[#080d18] text-xs font-semibold text-slate-300 hover:text-emerald-400 hover:border-emerald-500/50 hover:bg-emerald-500/10 transition-all group"
+                >
+                  <svg className="w-4 h-4 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                  <span>WhatsApp</span>
+                </a>
+
               </div>
             </div>
 
